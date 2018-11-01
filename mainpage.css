@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* CSS Document */
 
 body {
@@ -157,3 +158,154 @@ body {
   font-size: 22px
 
 }
+=======
+/* CSS Document */
+
+body {
+    background-color: white;
+}
+
+.backButton {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 18px;
+}
+
+
+.box1{
+  background-color: #aaa;
+    position: absolute;
+    top: 35%;
+    height: 250px;
+    width: 500px;
+    border: 25px #aaa;
+    padding: 25px;
+    margin: 25px;
+    float: left;
+    left: 10%;
+}
+
+.box2{
+  background-color: #aaa;
+    position: absolute;
+    right:0;
+    top:35%;
+    height: 250px;
+    width: 500px;
+    border: 25px #aaa;
+    padding: 25px;
+    margin: 25px;
+    float: left;
+    left: 50%;
+}
+
+
+.sendButton{
+  position:absolute;
+  left: 0;
+  top: 25%;
+  width: 60%;
+  text-align: right;
+}
+
+.cancelButton{
+  position:absolute;
+  left: 0;
+  top: 25%;
+  width: 70%;
+  text-align: right;
+}
+
+.deleteButton{
+  position:absolute;
+  left: 0;
+  top: 70%;
+  width: 70%;
+  text-align: left;
+  left: 39%;
+}
+
+.previewButton{
+  position:absolute;
+  left: 0;
+  top: 70%;
+  width: 70%;
+  text-align: left;
+  left: 79%;
+}
+
+.textBox{
+  position: absolute;
+  left: 0;
+  top: 70%;
+  text-align: left;
+  left: 15%;
+  font-size: 24px;
+}
+
+.sendTo{
+  position:absolute;
+  right: 50%;
+  top: 25%;
+  font-size: 18px;
+
+}
+
+.homeButton {
+    position: absolute;
+    top: 8px;
+    right: 500px;
+}
+
+.plusSign {
+    position: absolute;
+    top: 4px;
+    right: 400px;
+}
+
+.plusSign2{
+  position: absolute;
+  top: 230px;
+  left: 1px;
+}
+
+.smileyFace{
+  position: absolute;
+  top: 237px;
+  left:384px;
+}
+
+.magGlass {
+    position: absolute;
+    top: 8px;
+    right: 300px;
+}
+
+.notification {
+    position: absolute;
+    top: 8px;
+    right: 200px;
+}
+
+.gear {
+    position: absolute;
+    top: 5px;
+    right: 100px;
+}
+
+.questionMark {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.titleText {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+>>>>>>> 9095a157b02cd65b8f3b63ed6f1122b66120e295

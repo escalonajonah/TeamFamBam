@@ -1,0 +1,120 @@
+.titleText{
+  position: absolute;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+}
+
+.homeButton{
+  position: absolute;
+    top: 8px;
+    right: 500px;
+}
+
+.plusSign {
+    position: absolute;
+    top: 4px;
+    right: 400px;
+}
+
+.magGlass {
+    position: absolute;
+    top: 8px;
+    right: 300px;
+}
+
+.notification {
+    position: absolute;
+    top: 8px;
+    right: 200px;
+}
+
+.gear {
+    position: absolute;
+    top: 5px;
+    right: 100px;
+}
+
+.questionMark {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.mail{
+  position: absolute;
+  top: 70%;
+  height: 60px;
+  width: 60px;
+  float: left;
+  left: 15%
+}
+
+.contact1{
+  position: absolute;
+  top: 35%;
+  border-radius:25px;
+  background: #aaa;
+  padding: 20px;
+  width: 350px;
+  height: 300px;
+  float: left;
+  left: 5%;
+  text-align: center;
+
+}
+
+
+
+.dadPhoto{
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  float: left;
+  left: 30%;
+  top: 20%;
+}
+
+.contact2{
+  position: absolute;
+  top: 35%;
+  border-radius:25px;
+  background: #aaa;
+  padding: 20px;
+  width: 350px;
+  height: 300px;
+  float: left;
+  left: 37%;
+}
+
+.momPhoto{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  float: left;
+  left: 30%;
+  top: 17%;
+}
+
+.contact3{
+  position: absolute;
+  top: 35%;
+  border-radius:25px;
+  background: #aaa;
+  padding: 20px;
+  width: 350px;
+  height: 300px;
+  float: left;
+  left: 70%;
+}
+
+.brotherPhoto{
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  float: left;
+  left: 33%;
+  top: 17%;
+}

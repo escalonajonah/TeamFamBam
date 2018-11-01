@@ -4,7 +4,14 @@
 
 <title>Messaging Main Screen</title>
 
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
 </head>
+
 <link href="mainpage.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stylesheet">
@@ -13,7 +20,7 @@
 <body>
 
 <div class="buttons">
-	<a href="Index.html">
+	<a href="index.html">
 		<img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
 		style ="width:55px;height:45px;">
 	</a>
@@ -82,7 +89,7 @@
 
 
 <div class="backButton">
-	<button type="button" onclick="alert('BACK!')" 	style ="width: 100px;height:55px;"> BACK </button>
+	<button type="button" onclick="goBack()" 	style ="width: 100px;height:55px;"> BACK </button>
 </div>
 <div class="sendButton">
 	<button type="button" onclick="alert('SENT!')" style ="width:100px;height:55px;"> SEND </button>
