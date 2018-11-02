@@ -12,94 +12,112 @@ function goBack() {
 
 </head>
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="mainpage.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 <body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+    </a>
 
-<div class="buttons">
-	<a href="index.html">
-		<img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
-		style ="width:55px;height:45px;">
-	</a>
-</div>
-<div>
-	 <a href="mainpage.html">
-	  <img class="plusSign" scr="-webkit-user-select: none;" src="https://png.icons8.com/metro/1600/plus.png"
-	  style ="width:55px;height:55px;">
-	 </a>
-</div>
-<div>
-	 <a href="find.html">
-	  <img class="magGlass" src="https://image.flaticon.com/icons/png/512/57/57477.png"
-	  style ="width:50px;height:50px;">
-	 </a>
-</div>
-<div>
-	 <a href="notifications.html">
-	  <img class="notification" src="https://image.flaticon.com/icons/png/512/64/64568.png"
-	  style ="width:50px;height:50px;">
-	 </a>
-</div>
-<div>
-	 <a href="settings.html">
-	  <img class="gear" src="http://simpleicon.com/wp-content/uploads/gear.png"
-	  style ="width:55px;height:55px;">
-  </a>
-</div>
-<div>
-	 <a href="help.html">
-	  <img class="questionMark" src="http://www.astronomy.org.il/joomlafimal/images/fontawesome/question23.png"
-	  style ="width:80px;height:55px;">
-	 </a>
-</div>
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button type="button" class="btn btn-dark btn-lg" onclick="goBack()">Back</button>
+      </li>
+      <li class="nav-item">
+        <a href="index.html">
+          <img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
+          style ="width:55px;height:40px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="mainpage.html">
+         <img class="plusSign" scr="-webkit-user-select: none;" src="https://png.icons8.com/metro/1600/plus.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="find.html">
+         <img class="magGlass" src="https://image.flaticon.com/icons/png/512/57/57477.png"
+         style ="width:50px;height:45px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="notifications.html">
+         <img class="notification" src="https://image.flaticon.com/icons/png/512/64/64568.png"
+         style ="width:50px;height:45px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="settings.html">
+     	    <img class="gear" src="http://simpleicon.com/wp-content/uploads/gear.png"
+     	    style ="width:55px;height:50px;">
+       </a>
+      </li>
+      <li class="nav-item">
+        <a href="help.html">
+         <img class="questionMark" src="http://www.astronomy.org.il/joomlafimal/images/fontawesome/question23.png"
+         style ="width:80px;height:50px;">
+        </a>
+      </li>
+    </ul>
+  </nav>
 
+<!--JumboTron-->
+  <div class="jumbotron">
+    <h1 id="jumboTronText">Draft Interaction:</h1>
+    <p id="jumboTronText">Draft A Message And Preview It Before You Send.</p>
+  </div>
 
+<br>
 
-<div class="box1" >
-	<h2> [WRITTEN MESSAGE HERE] </h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-		do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	<div>
-			<img class="plusSign2" src="https://png.icons8.com/metro/1600/plus.png">
-		</div>
-			<div>
-				<img class="smileyFace" src="http://images.clipartpanda.com/straight-face-clipart-black-and-white-smiley-face-hi.png">
-			</div>
-	</div>
-	<div class="box2" >
-		<h2> [WRITTEN MESSAGE HERE] </h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-			do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
+<!-- Send To Form -->
+  <div class="input-group mb-2 input-group-lg" id="sendInput">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Send To:</span>
+    </div>
+    <input type="text" class="form-control">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button">OK</button>
+      <button class="btn btn-danger" type="button">Cancel</button>
+    </div>
+  </div>
 
+<br>
+<br>
 
-<div class="titleText">
-			<h1> Draft Interaction </h1>
-</div>
+<!-- Text Area -->
+  <div class="container-fluid">
+    <div class="form-group">
+      <textarea class="form-control" rows="5" id="comment"></textarea>
+    </div>
+  </div>
 
-<div class="sendTo">
-			<h2>SEND TO _______________________? <h2>
-</div>
-
-
-<div class="backButton">
-	<button type="button" onclick="goBack()" 	style ="width: 100px;height:55px;"> BACK </button>
-</div>
-<div class="sendButton">
-	<button type="button" onclick="alert('SENT!')" style ="width:100px;height:55px;"> SEND </button>
-</div>
-<div class="cancelButton">
-	<button type="button" onclick="alert('CANCELLED')" style ="width:100px;height:55px;"> CANCEL </button>
-</div>
-<div class="deleteButton">
-	<button type="button" onclick="alert('DELETE MESSAGE')" style ="width:100px; height:55px;"> DELETE </button>
-</div>
-<div class="previewButton">
-	<button type="button" onclick="alert('PREVIEW GOES HERE')" style ="width: 100px; height:55px;"> PREVIEW </button>
-</div>
-<div class="textBox">
-	<textarea rows="3" cols="43"> [Type Message Here] </textarea>
-</div>
+<!-- Plus and Smiley Face Buttons -->
+<ul class="secondButtons">
+  <li class="listItem">
+    <div>
+      <img class="plusSign2" src="https://png.icons8.com/metro/1600/plus.png">
+    </div>
+  </li>
+  <li class="listItem">
+    <p>  </p>
+  </li>
+  <li class="listItem">
+    <div>
+      <img class="smileyFace" src="http://images.clipartpanda.com/straight-face-clipart-black-and-white-smiley-face-hi.png">
+    </div>
+    </li>
+  </div>
+</ul>
 
 </body>
 </html>
