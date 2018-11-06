@@ -1,11 +1,6 @@
 <head>
 <title> Find People </title>
 
-<link href="mainpage.css" rel="stylesheet" type="text/css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="css/index.css" rel="stylesheet">
-
 <script>
 function goBack() {
     window.history.back();
@@ -14,12 +9,85 @@ function goBack() {
 
 </head>
 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="mainpage.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
 <body>
 
-<div class="titleText">
-  <h1> Find People </h1>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button type="button" class="btn btn-dark btn-lg" onclick="goBack()">Back</button>
+      </li>
+      <li class="nav-item">
+        <a href="index.html">
+          <img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
+          style ="width:55px;height:40px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="mainpage.html">
+         <img class="plusSign" scr="-webkit-user-select: none;" src="https://png.icons8.com/metro/1600/plus.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="find.html">
+         <img class="magGlass" src="https://image.flaticon.com/icons/png/512/57/57477.png"
+         style ="width:50px;height:45px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="notifications.html">
+         <img class="notification" src="https://image.flaticon.com/icons/png/512/64/64568.png"
+         style ="width:50px;height:45px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="settings.html">
+     	    <img class="gear" src="http://simpleicon.com/wp-content/uploads/gear.png"
+     	    style ="width:55px;height:50px;">
+       </a>
+      </li>
+      <li class="nav-item">
+        <a href="help.html">
+         <img class="questionMark" src="http://www.astronomy.org.il/joomlafimal/images/fontawesome/question23.png"
+         style ="width:80px;height:50px;">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<!--JumboTron-->
+  <div class="jumbotron">
+    <h1 id="jumboTronText">Find People</h1>
+    <p id="jumboTronText">Search for someone here</p>
+  </div>
+
+<br>
+
+<div class="input-group mb-2 input-group-lg" id="sendInput">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Send To:</span>
+  </div>
+  <input type="text" class="form-control">
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button">Search</button>
+  </div>
 </div>
 
+<!--
 <div class="buttons">
 	<a href="index.html">
 		<img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
@@ -60,23 +128,7 @@ function goBack() {
 <div class="backButton">
 	<button type="button" onclick="goBack()" 	style ="width: 100px;height:55px;"> BACK </button>
 </div>
-
-<!--
-<div class="btn-group" role="group" aria-label="Basic example">
-  <a href="Index.html" type="button" class="btn btn-primary">Home</a>
-  <a href="notifications.html" type="button" class="btn btn-primary">Notifications</a>
-  <a href="stats.html" type="button" class="btn btn-primary">Interaction Stats</a>
-  <a href="find.html" type="button" class="btn btn-primary">Find People</a>
-  <a href="settings.html" type="button" class="btn btn-primary">Settings</a>
-  <a href="help.html" type="button" class="btn btn-primary">Help</a>
-</div>
 -->
-
-<div class="bodyText">
-  <p>
-    People Search Function Goes Here
-  </p>
-</div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
