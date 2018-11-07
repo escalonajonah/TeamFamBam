@@ -5,11 +5,8 @@
     background-color: #666699;
 }
 
-.backButton {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 18px;
+#backButton {
+  margin-right: 10px;
 }
 
 #sendInput {

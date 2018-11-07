@@ -21,7 +21,7 @@ function goBack() {
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <nav class="navbar navbar-expand-sm bg-dark navbar-light">
     <!-- Brand/logo -->
     <a class="navbar-brand" href="#">
     </a>
@@ -29,42 +29,47 @@ function goBack() {
     <!-- Links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <button type="button" class="btn btn-dark btn-lg" onclick="goBack()">Back</button>
+        <button type="button" class="btn btn-light btn-lg" id="backButton" onclick="goBack()">Back</button>
       </li>
       <li class="nav-item">
         <a href="index.html">
-          <img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
-          style ="width:55px;height:40px;">
+          <button type="button" class="btn btn-danger btn-lg"> Log Out </button>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="home.html">
+          <img class="homeButton" scr= "-webkit-user-select: none;" src="icons/home_white.png"
+          style ="width:55px;height:50px;">
         </a>
       </li>
       <li class="nav-item">
         <a href="mainpage.html">
-         <img class="plusSign" scr="-webkit-user-select: none;" src="https://png.icons8.com/metro/1600/plus.png"
+         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/Plus_Sign_White.png"
          style ="width:55px;height:50px;">
         </a>
       </li>
       <li class="nav-item">
         <a href="find.html">
-         <img class="magGlass" src="https://image.flaticon.com/icons/png/512/57/57477.png"
-         style ="width:50px;height:45px;">
+         <img class="magGlass" src="icons/magnifyingGlass_white.png"
+         style ="width:55px;height:50px;">
         </a>
       </li>
       <li class="nav-item">
         <a href="notifications.html">
-         <img class="notification" src="https://image.flaticon.com/icons/png/512/64/64568.png"
-         style ="width:50px;height:45px;">
+         <img class="notification" src="icons/alert_white.png"
+         style ="width:55px;height:50px;">
         </a>
       </li>
       <li class="nav-item">
         <a href="settings.html">
-     	    <img class="gear" src="http://simpleicon.com/wp-content/uploads/gear.png"
-     	    style ="width:55px;height:50px;">
+          <img class="gear" src="icons/gear_white.png"
+          style ="width:55px;height:50px;">
        </a>
       </li>
       <li class="nav-item">
         <a href="help.html">
-         <img class="questionMark" src="http://www.astronomy.org.il/joomlafimal/images/fontawesome/question23.png"
-         style ="width:80px;height:50px;">
+         <img class="questionMark" src="icons/questionmark_white.png"
+         style ="width:55px;height:50px;">
         </a>
       </li>
     </ul>
