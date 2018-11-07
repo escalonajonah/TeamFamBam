@@ -13,6 +13,18 @@
     right: 500px;
 }
 
+.card{
+  width: 400px;
+}
+
+.cardImg{
+  width:100%;
+}
+
+.profileName{
+  color: #000000;
+}
+
 .plusSign {
     position: absolute;
     top: 4px;
