@@ -17,6 +17,16 @@
   width: 400px;
 }
 
+#unavailable{
+  border-color: red;
+  border-width: medium;
+}
+
+#available{
+  border-color: green;
+  border-width: medium;
+}
+
 .cardImg{
   width:100%;
 }

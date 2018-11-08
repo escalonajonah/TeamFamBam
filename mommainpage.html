@@ -1,6 +1,8 @@
+<!doctype html>
 <html>
 <head>
-<title> Brother's Profile </title>
+
+<title>Messaging Main Screen</title>
 
 <script>
 function goBack() {
@@ -18,14 +20,7 @@ function goBack() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
-<script src="js/graphs.js"></script>
-
 <body>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-light">
     <!-- Brand/logo -->
@@ -81,69 +76,67 @@ function goBack() {
     </ul>
   </nav>
 
+<!--JumboTron-->
+  <div class="jumbotron">
+    <h1 id="jumboTronText">Draft Interaction:</h1>
+    <p id="jumboTronText">Draft A Message And Preview It Before You Send.</p>
+  </div>
+
 <br>
 
-<!--JumboTron-->
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card" id="available">
-      <a href="mom.html">
-        <img class="cardImg" src="avatars/img_avatar1.png">
-      </a>
-      <div class="card-body">
-        <a href="mom.html" class="profileName">
-          <h4 class="card-title"> Brother </h4>
-        </a>
-        <p class="card-text"> Some example text. Some Example Text. </p>
-        <a href="mommainpage.html" class="btn btn-success disabled">Interact</a>
-        <a href="stats.html" class="btn btn-warning">Statistics</a>
-      </div>
+<div id = "alert_placeholder"></div>
+
+<br>
+<!-- Send To Form -->
+  <div class="input-group mb-2 input-group-lg" id="sendInput">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Send To:</span>
+    </div>
+    <input type="text" class="form-control" value="Mom">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="button" id="submit">OK</button>
+      <button class="btn btn-danger" type="button">Cancel</button>
     </div>
   </div>
 
-  <div class="col-sm-8">
-    <div class="card" >
-      <ul>
-        <li>Birthday: 1/5/2001 </li>
-        <li>Location: San Diego, CA</li>
-        <li>Unavailable for interaction</li>
-      </ul>
-      <div class="card-body">
-          <canvas class="graph" id="myLineChart" ></canvas>
-      </div>
+<br>
+<br>
+
+<!-- Text Area -->
+  <div class="container-fluid">
+    <div class="form-group">
+      <textarea class="form-control" rows="5" id="comment"></textarea>
     </div>
   </div>
-</div>
+
+<!-- Plus and Smiley Face Buttons -->
+<!--
+<ul class="secondButtons">
+  <li class="listItem">
+    <div>
+      <img class="plusSign2" src="https://png.icons8.com/metro/1600/plus.png">
+    </div>
+  </li>
+  <li class="listItem">
+    <div>
+      <img class="smileyFace" src="http://images.clipartpanda.com/straight-face-clipart-black-and-white-smiley-face-hi.png">
+    </div>
+    </li>
+  </div>
+</ul>
+-->
 
 <script type="text/javascript">
-
-  //For the Line-Area Chart
-  var ctx = document.getElementById('myLineChart').getContext('2d');
-  var chart = new Chart(ctx, {
-      // The type of chart we want to create
-      type: 'line',
-      // The data for our dataset
-      data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-          datasets: [{
-              label: "Your Interactions with User",
-              backgroundColor: '#ff0000',
-              borderColor: '#9999ff',
-              data: [0, 3, 5, 2, 20, 10, 20, 5, 15, 60, 0, 16],
-          }]
-      },
-      // Configuration options go here
-      options: {
-          title: {
-            display: true,
-            fontSize: 20,
-            text: 'Number of Interactions over Time'
-          }
+bootstrap_alert = function() {}
+bootstrap_alert.warning = function(message) {
+          $('#alert_placeholder').html('<div class="alert alert-success"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
       }
-  });
+
+
+$('#submit').on('click', function() {
+          bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="momstats.html">Interactions</a>.');
+});
 </script>
 
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

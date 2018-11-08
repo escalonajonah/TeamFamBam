@@ -84,6 +84,9 @@ function goBack() {
 
 <br>
 
+<div id = "alert_placeholder"></div>
+
+<br>
 <!-- Send To Form -->
   <div class="input-group mb-2 input-group-lg" id="sendInput">
     <div class="input-group-prepend">
@@ -106,7 +109,9 @@ function goBack() {
     </div>
   </div>
 
+
 <!-- Plus and Smiley Face Buttons -->
+<!--
 <ul class="secondButtons">
   <li class="listItem">
     <div>
@@ -120,6 +125,19 @@ function goBack() {
     </li>
   </div>
 </ul>
+-->
+
+<script type="text/javascript">
+bootstrap_alert = function() {}
+bootstrap_alert.warning = function(message) {
+          $('#alert_placeholder').html('<div class="alert alert-success"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+      }
+
+
+$('#submit').on('click', function() {
+          bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="momstats.html">Interactions</a>.');
+});
+</script>
 
 </body>
 </html>
