@@ -31,6 +31,10 @@
     padding: 25px;
 }
 
+.graph{
+  margin-bottom: 50px;
+}
+
 .secondButtons {
   display: inline-block;
   list-style: none;
