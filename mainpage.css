@@ -31,6 +31,10 @@
     padding: 25px;
 }
 
+#notification{
+  margin-bottom: 20px;
+}
+
 .graph{
   margin-bottom: 50px;
 }
