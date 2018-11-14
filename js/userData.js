@@ -1,17 +1,35 @@
-var defaultData = {
-  'userName': 'User Name',
-  'password': 'Password',
-  'email': 'Email',
-}
+//Registration Form Data
+var userName = document.getElementById("user");
+var passWord = document.getElementById("pass");
+var email = document.getElementById("emailAdd");
 
+function saveData(){
+  localStorage.setItem('userName', user.value);
+  localStorage.setItem('passWord', pass.value);
+  localStorage.setItem('email', emailAdd.value);
+  window.location.href="index.html";
+  alert("Your User Details Have Been Saved!");
+};
+
+//Login Page Data
+var inputUser = document.getElementById('inputU');
+var inputPass = document.getElementById('inputP');
+
+function logIn(){
+  var storedUser = localStorage.getItem('userName');
+  var storedPass = localStorage.getItem('passWord');
+
+  if(inputUser.value == storedUser && inputPass.value == storedPass){
+    alert ("You Have Successfully Logged in!");
+    window.location.href="home.html";
+  } else {
+    alert ("This Login Information is Invalid");
+  }
+}
 
 $(document).ready(function() {
   console.log('hello world');
 
-  function saveData(){
-    localStorage.setItem('userName', input.value);
-    localStorage.setItem('password', input.value);
-    localStorage.setItem('email', input.value);
-  }
+
 
 });

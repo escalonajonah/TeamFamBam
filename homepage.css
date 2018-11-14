@@ -19,12 +19,12 @@
 
 #unavailable{
   border-color: red;
-  border-width: medium;
+  border-width: thick;
 }
 
 #available{
   border-color: green;
-  border-width: medium;
+  border-width: thick;
 }
 
 .cardImg{

@@ -2,6 +2,7 @@
 <head>
   <title> Login and Register </title>
       <link rel="stylesheet" href="loginstyle.css">
+
   </head>
 <body>
     <div class="appName"
@@ -13,11 +14,11 @@
     <div class="loginPage">
     <div class="form">
         <form class="registerForm">
-          <input type="text" placeholder="User Name"/>
-          <input type="text" placeholder="Password"/>
-          <input type="text" placeholder="Email"/>
+          <input type="text" placeholder="User Name" id="user"/>
+          <input type="password" placeholder="Password" id="pass"/>
+          <input type="text" placeholder="Email" id="emailAdd"/>
 
-          <input class="button" onclick="window.location.href='home.html'"
+          <input class="button" onclick="saveData()"
           type="button" value="SIGN UP" />
           <p class="message">Already Registered? <a href="#">Login</a></p>
           </form>
@@ -25,10 +26,10 @@
 
 
         <form class="loginForm">
-          <input type="text" placeholder="User Name"/>
-          <input type="text" placeholder="Password"/>
+          <input type="text" placeholder="User Name" id="inputU"/>
+          <input type="password" placeholder="Password" id="inputP"/>
 
-          <input type="button" class="button" onclick="window.location.href='home.html'"
+          <input type="button" class="button" onclick="logIn()"
            value="LOG IN" />
           <p class="message">Not Registered? <a href="#">Register</a></p>
         </form>
@@ -47,4 +48,5 @@
 
 
 <script src="js/handlebars-v4.0.11.js"></script>
+<script src="js/userData.js"></script>
 </html>
