@@ -78,14 +78,27 @@ function goBack() {
 </nav>
 
 <!--JumboTron-->
-<div class="jumbotron">
-  <h1 id="jumboTronText">Welcome Back User!</h1>
-  <p id="jumboTronText"></p>
+<div class="jumbotron" id="templatedJumbo">
+  <h1 id="jumboTronText">
+    <script type="text/javascript">
+      var x = "Welcome Back ";
+      var y = localStorage.getItem('firstName');
+      document.getElementById("jumboTronText").innerHTML = x + y;
+    </script>
+  </h1>
 </div>
+
+<!-- JumboTron Template for Individual User
+<script id="jumbo-template" type="text/x-handlebars-template">
+<button type="button" class="btn btn-primary" name="button" onclick="addFriend()">Add Friendo</button>
+</script>
+-->
+
+
 
 <br>
 
-<!--Profile Cards -->
+<!--Profile Cards (Default) -->
 <div class="container">
   <div class="card-deck">
     <div class="card" id="unavailable">
@@ -137,55 +150,33 @@ function goBack() {
 
   <br>
 
-  <div class="card-deck">
-    <div class="card" id="unavailable">
+ <!-- Handlebars Template -->
+  <script id="card-template" type="text/x-handlebars-template">
+    <div class="card" id="unavailable{{index}}">
       <a href="#">
-        <img class="cardImg" src="avatars/img_avatar6.png">
+        <img class="cardImg" src="{{avatar}}">
       </a>
       <div class="card-body">
         <a href="#" class="profileName">
-          <h4 class="card-title"> Profile </h4>
+          <h4 class="card-title">{{profile}}</h4>
         </a>
-        <p class="card-text"> Some Example Text Some Example Text. Person is currently unavailable. </p>
+        <p class="card-text"> {{description}} </p>
         <a href="#" class="btn btn-primary">See Profile</a>
         <a href="#" class="btn btn-success disabled">Interact</a>
         <a href="stats.html" class="btn btn-warning">Statistics</a>
       </div>
     </div>
+  </script>
 
-    <div class="card" id="unavailable">
-      <a href="#">
-        <img class="cardImg" src="avatars/img_avatar1.png">
-      </a>
-      <div class="card-body">
-        <a href="#" class="profileName">
-          <h4 class="card-title"> Profile </h4>
-        </a>
-        <p class="card-text"> Some Example Text Some Example Text. Person is currently available. </p>
-        <a href="#" class="btn btn-primary">See Profile</a>
-        <a href="#" class="btn btn-success disabled">Interact</a>
-        <a href="stats.html" class="btn btn-warning">Statistics</a>
-      </div>
-    </div>
-
-    <div class="card" id="unavailable">
-      <a href="#">
-        <img class="cardImg" src="avatars/img_avatar6.png">
-      </a>
-      <div class="card-body">
-        <a href="#" class="profileName">
-          <h4 class="card-title"> Profile </h4>
-        </a>
-        <p class="card-text"> Some Example Text Some Example Text. Person is currently unavailable. </p>
-        <a href="#" class="btn btn-primary">See Profile</a>
-        <a href="#" class="btn btn-success disabled">Interact</a>
-        <a href="stats.html" class="btn btn-warning">Statistics</a>
-      </div>
-    </div>
+  <!-- Inject Templated Project HTML Here -->
+  <div class="card-deck" id="templatedCards">
 
   </div>
+
 </div>
 
-
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/handlebars-v4.0.11.js"></script>
+  <script src="js/mainpage.js"></script>
   </body>
 </html>

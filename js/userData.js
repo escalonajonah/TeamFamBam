@@ -2,11 +2,15 @@
 var userName = document.getElementById("user");
 var passWord = document.getElementById("pass");
 var email = document.getElementById("emailAdd");
+var firstName = document.getElementById("fName");
+var lastName = document.getElementById("lName");
 
 function saveData(){
   localStorage.setItem('userName', user.value);
   localStorage.setItem('passWord', pass.value);
   localStorage.setItem('email', emailAdd.value);
+  localStorage.setItem('firstName', fName.value);
+  localStorage.setItem('lastName', lName.value);
   window.location.href="index.html";
   alert("Your User Details Have Been Saved!");
 };
