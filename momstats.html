@@ -46,13 +46,7 @@ function goBack() {
       </li>
       <li class="nav-item">
         <a href="home.html">
-          <img class="homeButton" scr= "-webkit-user-select: none;" src="icons/home_white.png"
-          style ="width:55px;height:50px;">
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="mainpage.html">
-         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/Plus_Sign_White.png"
+         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/home_white.png"
          style ="width:55px;height:50px;">
         </a>
       </li>
@@ -105,7 +99,21 @@ function goBack() {
 </div>
 
 <div class="container">
-  <canvas class="graph" id="myBarChart" ></canvas>
+  <div class="card">
+    <h2 id="heading">
+      <script type="text/javascript">
+        var x = localStorage.getItem('too');
+        var z = "Your Most Recent Message to: "
+        document.getElementById('heading').innerHTML = z + x;
+      </script>
+    </h2>
+    <p id="message">
+      <script type="text/javascript">
+        var y = localStorage.getItem('comm');
+        document.getElementById('message').innerHTML = y;
+      </script>
+    </p>
+  </div>
 </div>
 
 <script type="text/javascript">
@@ -136,48 +144,6 @@ function goBack() {
   });
 </script>
 
-<!--
-<div class="buttons">
-	<a href="index.html">
-		<img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
-		style ="width:55px;height:45px;">
-	</a>
-</div>
-<div>
-  <a href="mainpage.html">
-  	<img class="plusSign" scr="-webkit-user-select: none;" src="https://png.icons8.com/metro/1600/plus.png"
-  	style ="width:55px;height:55px;">
-  </a>
-</div>
-<div>
-  <a href="find.html">
-  	<img class="magGlass" src="https://image.flaticon.com/icons/png/512/57/57477.png"
-  	style ="width:50px;height:50px;">
-  </a>
-</div>
-<div>
-  <a href="notifications.html">
-  	<img class="notification" src="https://image.flaticon.com/icons/png/512/64/64568.png"
-  	style ="width:50px;height:50px;">
-  </a>
-</div>
-<div>
-  <a href="settings.html">
-  	<img class="gear" src="http://simpleicon.com/wp-content/uploads/gear.png"
-  	style ="width:55px;height:55px;">
-  </a>
-</div>
-<div>
-  <a href="help.html">
-  	<img class="questionMark" src="http://www.astronomy.org.il/joomlafimal/images/fontawesome/question23.png"
-  	style ="width:80px;height:55px;">
-  </a>
-</div>
-
-<div class="backButton">
-	<button type="button" onclick="goBack()" 	style ="width: 100px;height:55px;"> BACK </button>
-</div>
--->
 
 
 <script src="https://code.jquery.com/jquery.js"></script>

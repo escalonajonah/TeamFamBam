@@ -28,54 +28,48 @@ function goBack() {
 
   <!-- NavBar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-light">
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <button type="button" class="btn btn-secondary btn-lg" id="backButton" onclick="goBack()">Back</button>
-    </li>
-    <li class="nav-item">
-      <a href="index.html">
-        <button type="button" class="btn btn-danger btn-lg"> Log Out </button>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="home.html">
-        <img class="homeButton" scr= "-webkit-user-select: none;" src="icons/home_white.png"
-        style ="width:55px;height:50px;">
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="mainpage.html">
-       <img class="plusSign" scr="-webkit-user-select: none;" src="icons/Plus_Sign_White.png"
-       style ="width:55px;height:50px;">
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="find.html">
-       <img class="magGlass" src="icons/magnifyingGlass_white.png"
-       style ="width:55px;height:50px;">
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="notifications.html">
-       <img class="notification" src="icons/alert_white.png"
-       style ="width:55px;height:50px;">
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="settings.html">
-        <img class="gear" src="icons/gear_white.png"
-        style ="width:55px;height:50px;">
-     </a>
-    </li>
-    <li class="nav-item">
-      <a href="help.html">
-       <img class="questionMark" src="icons/questionmark_white.png"
-       style ="width:55px;height:50px;">
-      </a>
-    </li>
-  </ul>
-</nav>
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button type="button" class="btn btn-secondary btn-lg" id="backButton" onclick="goBack()">Back</button>
+      </li>
+      <li class="nav-item">
+        <a href="index.html">
+          <button type="button" class="btn btn-danger btn-lg"> Log Out </button>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="home.html">
+         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/home_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="find.html">
+         <img class="magGlass" src="icons/magnifyingGlass_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="notifications.html">
+         <img class="notification" src="icons/alert_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="settings.html">
+          <img class="gear" src="icons/gear_white.png"
+          style ="width:55px;height:50px;">
+       </a>
+      </li>
+      <li class="nav-item">
+        <a href="help.html">
+         <img class="questionMark" src="icons/questionmark_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+    </ul>
+  </nav>
 
 <br>
 
@@ -90,9 +84,9 @@ function goBack() {
         <a href="mom.html" class="profileName">
           <h4 class="card-title"> Dad </h4>
         </a>
-        <p class="card-text"> Some example text. Some Example Text. </p>
-        <a href="mainpage.html" class="btn btn-success disabled">Interact</a>
-        <a href="stats.html" class="btn btn-warning">Statistics</a>
+        <p class="card-text"> This person is available. </p>
+        <a href="dadmainpage.html" class="btn btn-success" onclick="iterate()">Interact</a>
+        <a href="dadstats.html" class="btn btn-warning">Statistics</a>
       </div>
     </div>
   </div>
@@ -111,10 +105,26 @@ function goBack() {
   </div>
 </div>
 
+<div class="container">
+  <div class="card" style="margin-top: 20px; margin-bottom: 20px">
+    <h2 id="heading">
+      Your most recent message to Dad:
+    </h2>
+    <p id="message">
+      <script type="text/javascript">
+        var y = localStorage.getItem('com');
+        document.getElementById('message').innerHTML = y;
+      </script>
+    </p>
+  </div>
+</div>
+
 <script type="text/javascript">
 
   //For the Line-Area Chart
   var ctx = document.getElementById('myLineChart').getContext('2d');
+
+  var November = 0;
   var chart = new Chart(ctx, {
       // The type of chart we want to create
       type: 'line',
@@ -125,7 +135,7 @@ function goBack() {
               label: "Your Interactions with User",
               backgroundColor: '#99e699',
               borderColor: '#ff0000',
-              data: [0, 3, 5, 2, 20, 10, 20, 5, 15, 60, 0, 16],
+              data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
           }]
       },
       // Configuration options go here
@@ -137,6 +147,7 @@ function goBack() {
           }
       }
   });
+
 </script>
 
 <script src="https://code.jquery.com/jquery.js"></script>

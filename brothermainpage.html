@@ -86,7 +86,7 @@ function goBack() {
     <div class="input-group-prepend">
       <span class="input-group-text">Send To:</span>
     </div>
-    <input type="text" class="form-control" value="Mom" id="to">
+    <input type="text" class="form-control" value="Brother" id="to">
     <div class="input-group-append">
       <button class="btn btn-primary" type="button" id="submit" onclick="saveText()">Send</button>
       <button class="btn btn-danger" type="button" onclick="refresh()">Cancel</button>
@@ -103,14 +103,15 @@ function goBack() {
     </div>
   </div>
 
+
   <script type="text/javascript">
 
-  var too = document.getElementById("to");
-  var comm = document.getElementById("comment");
+  var tooo = document.getElementById("to");
+  var commm = document.getElementById("comment");
 
   function saveText(){
-    localStorage.setItem('too', to.value);
-    localStorage.setItem('comm', comment.value)
+    localStorage.setItem('tooo', to.value);
+    localStorage.setItem('commm', comment.value)
   }
 
   function refresh(){
@@ -128,7 +129,7 @@ bootstrap_alert.warning = function(message) {
 
 
 $('#submit').on('click', function() {
-          bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="momstats.html">Interactions</a>.');
+          bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="brotherstats.html">Interactions</a>.');
 });
 </script>
 

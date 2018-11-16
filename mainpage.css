@@ -5,6 +5,15 @@
     background-color: #666699;
 }
 
+#message {
+  text-align: center;
+  font-size: 300%;
+}
+#heading{
+  text-align: center;
+  font-weight: bold;
+}
+
 #backButton {
   margin-right: 10px;
 }

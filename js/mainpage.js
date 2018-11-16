@@ -22,7 +22,7 @@ function addFriend(){
 
 $(document).ready(function(){
   console.log('hello world');
-
+  }
 
   //for (var i = 0; i < cardData.length; i++) {
     //var curData = cardData[i];

@@ -86,7 +86,7 @@ function goBack() {
     <div class="input-group-prepend">
       <span class="input-group-text">Send To:</span>
     </div>
-    <input type="text" class="form-control" value="Mom" id="to">
+    <input type="text" class="form-control" value="Dad" id="to">
     <div class="input-group-append">
       <button class="btn btn-primary" type="button" id="submit" onclick="saveText()">Send</button>
       <button class="btn btn-danger" type="button" onclick="refresh()">Cancel</button>
@@ -103,22 +103,22 @@ function goBack() {
     </div>
   </div>
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
-  var too = document.getElementById("to");
-  var comm = document.getElementById("comment");
+var to = document.getElementById("to");
+var com = document.getElementById("comment");
 
-  function saveText(){
-    localStorage.setItem('too', to.value);
-    localStorage.setItem('comm', comment.value)
-  }
+function saveText(){
+  localStorage.setItem('to', to.value);
+  localStorage.setItem('com', comment.value)
+}
 
-  function refresh(){
-    alert("You cancelled your interaction.")
-    location.reload();
-  }
+function refresh(){
+  alert("You cancelled your interaction.")
+  location.reload();
+}
 
-  </script>
+</script>
 
 <script type="text/javascript">
 bootstrap_alert = function() {}
@@ -128,7 +128,7 @@ bootstrap_alert.warning = function(message) {
 
 
 $('#submit').on('click', function() {
-          bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="momstats.html">Interactions</a>.');
+          bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="dadstats.html">Interactions</a>.');
 });
 </script>
 

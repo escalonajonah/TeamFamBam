@@ -44,13 +44,7 @@ function goBack() {
       </li>
       <li class="nav-item">
         <a href="home.html">
-          <img class="homeButton" scr= "-webkit-user-select: none;" src="icons/home_white.png"
-          style ="width:55px;height:50px;">
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="mainpage.html">
-         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/Plus_Sign_White.png"
+         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/home_white.png"
          style ="width:55px;height:50px;">
         </a>
       </li>
@@ -94,7 +88,7 @@ function goBack() {
         <a href="mom.html" class="profileName">
           <h4 class="card-title"> Mom </h4>
         </a>
-        <p class="card-text"> Some example text. Some Example Text. </p>
+        <p class="card-text"> This person is available. </p>
         <a href="mommainpage.html" class="btn btn-success">Interact</a>
         <a href="momstats.html" class="btn btn-warning">Statistics</a>
       </div>
@@ -117,6 +111,19 @@ function goBack() {
 
 <br>
 
+<div class="container">
+  <div class="card" style="margin-top: 20px; margin-bottom: 20px">
+    <h2 id="heading">
+      Your most recent message to Mom:
+    </h2>
+    <p id="message">
+      <script type="text/javascript">
+        var y = localStorage.getItem('comm');
+        document.getElementById('message').innerHTML = y;
+      </script>
+    </p>
+  </div>
+</div>
 
 <script type="text/javascript">
 

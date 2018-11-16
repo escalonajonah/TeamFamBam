@@ -1,13 +1,22 @@
 <head>
-<title> Notifications Page </title>
+<title> Interaction Statistics </title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="mainpage.css" rel="stylesheet" type="text/css">
+
+<!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<!-- Chartjs Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+<script src="js/graphs.js"></script>
 
 <script>
 function goBack() {
@@ -70,51 +79,73 @@ function goBack() {
 
 <!--JumboTron-->
   <div class="jumbotron">
-    <h1 id="jumboTronText">Notifications</h1>
-    <p id="jumboTronText">Check for Interactions and Suggestions from the App.</p>
+    <h1 id="jumboTronText">Interaction Statistics</h1>
   </div>
 
 <br>
 
 <div class="container">
-  <div class="card" id="notification">
-    <h2 id="jumboTronText">Message from Mom:</h2>
-    <p id="jumboTronText">I hope you are eating your veggies!</p>
-    <a href="mommainpage.html" class="btn btn-primary">Reply to Interaction</a>
+  <div class="card">
+    <h2 id="jumboTronText">Your Suggestion:</h2>
+    <p id="jumboTronText">This is your first message to your Dad! Keep it up!</p>
+    <a href="dad.html" class="btn btn-primary">Dad's Profile</a>
   </div>
 </div>
 
+<br>
+
 <div class="container">
-  <div class="card" id="notification">
-    <h2 id="jumboTronText">New Suggestion:</h2>
-    <p id="jumboTronText">You should check in with Dad! You haven't been interacting lately!</p>
-    <a href="dad.html" class="btn btn-success">User's Profile</a>
-  </div>
+  <canvas class="graph" id="myLineChart" ></canvas>
 </div>
 
 <div class="container">
-  <div class="card" id="notification">
-    <h2 id="jumboTronText">New Message from Brother:</h2>
-    <p id="jumboTronText">So when are you coming back to visit? I miss ya!</p>
-    <a href="mainpage.html" class="btn btn-primary">Reply to Interaction</a>
+  <div class="card">
+    <h2 id="heading">
+      <script type="text/javascript">
+        var x = localStorage.getItem('to');
+        var z = "Your Most Recent Message to: "
+        document.getElementById('heading').innerHTML = z + x;
+      </script>
+    </h2>
+    <p id="message">
+      <script type="text/javascript">
+        var y = localStorage.getItem('com');
+        document.getElementById('message').innerHTML = y;
+      </script>
+    </p>
   </div>
 </div>
 
-<div class="container">
-  <div class="card" id="notification">
-    <h2 id="jumboTronText">New Message from Dad:</h2>
-    <p id="jumboTronText">I hope everything is going ok for you up there! Come by and say hi sometime!</p>
-    <a href="mainpage.html" class="btn btn-primary">Reply to Interaction</a>
-  </div>
-</div>
+<script type="text/javascript">
 
-<div class="container">
-  <div class="card" id="notification">
-    <h2 id="jumboTronText">New Suggestion:</h2>
-    <p id="jumboTronText">You have been interacting with Mom a lot! Keep it up!</p>
-    <a href="mom.html" class="btn btn-success">User's Profile</a>
-  </div>
-</div>
+  //For the Line-Area Chart
+  var ctx = document.getElementById('myLineChart').getContext('2d');
+
+  var November = 0;
+  var chart = new Chart(ctx, {
+      // The type of chart we want to create
+      type: 'line',
+      // The data for our dataset
+      data: {
+          labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+          datasets: [{
+              label: "Your Interactions with User",
+              backgroundColor: '#99e699',
+              borderColor: '#ff0000',
+              data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+          }]
+      },
+      // Configuration options go here
+      options: {
+          title: {
+            display: true,
+            fontSize: 20,
+            text: 'Number of Interactions over Time'
+          }
+      }
+  });
+</script>
+
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
