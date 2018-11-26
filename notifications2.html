@@ -1,0 +1,185 @@
+<head>
+<title> Notifications Page </title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="mainpage.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-light">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button type="button" class="btn btn-secondary btn-lg" id="backButton" onclick="goBack()">Back</button>
+      </li>
+      <li class="nav-item">
+        <a href="index.html">
+          <button type="button" class="btn btn-danger btn-lg"> Log Out </button>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="home.html">
+         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/home_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="find.html">
+         <img class="magGlass" src="icons/magnifyingGlass_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="notifications.html">
+         <img class="notification" src="icons/alert_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="settings.html">
+          <img class="gear" src="icons/gear_white.png"
+          style ="width:55px;height:50px;">
+       </a>
+      </li>
+      <li class="nav-item">
+        <a href="help.html">
+         <img class="questionMark" src="icons/questionmark_white.png"
+         style ="width:55px;height:50px;">
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+<!--JumboTron-->
+  <div class="jumbotron">
+    <h1 id="jumboTronText">Notifications</h1>
+    <p id="jumboTronText">Check for Interactions and Suggestions from the App.</p>
+  </div>
+
+<!-- Tabs for Notifications/Suggestions -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Messages')" id="defaultOpen">Messages</button>
+  <button class="tablinks" onclick="openCity(event, 'Suggestions')">Suggestions</button>
+</div>
+
+
+<!-- Content Within Tabs -->
+<div id="Messages" class="tabcontent">
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Message from Mom:</h2>
+      <p id="jumboTronText">I hope you are eating your veggies!</p>
+      <a href="mommainpage.html" class="btn btn-primary">Reply to Interaction</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Message from Brother:</h2>
+      <p id="jumboTronText">So when are you coming back to visit? I miss ya!</p>
+      <a href="brothermainpage.html" class="btn btn-primary">Reply to Interaction</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Message from Dad:</h2>
+      <p id="jumboTronText">I hope everything is going ok for you up there! Come by and say hi sometime!</p>
+      <a href="dadmainpage.html" class="btn btn-primary">Reply to Interaction</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">Message from Mom:</h2>
+      <p id="jumboTronText">Hello!</p>
+      <a href="mommainpage.html" class="btn btn-primary">Reply to Interaction</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Message from Brother:</h2>
+      <p id="jumboTronText">Hi There!</p>
+      <a href="brothermainpage.html" class="btn btn-primary">Reply to Interaction</a>
+    </div>
+  </div>
+
+</div>
+
+<div id="Suggestions" class="tabcontent">
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Suggestion:</h2>
+      <p id="jumboTronText">You should check in with Dad! You haven't been interacting lately!</p>
+      <a href="dad.html" class="btn btn-success">User's Profile</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Suggestion:</h2>
+      <p id="jumboTronText">Talk to Friendo once he's free! Its been a while!</p>
+      <a href="friendo.html" class="btn btn-success">User's Profile</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Suggestion:</h2>
+      <p id="jumboTronText">You have an average amount of interacton with Buddy, keep interacting!</p>
+      <a href="buddy.html" class="btn btn-success">User's Profile</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card" id="notification">
+      <h2 id="jumboTronText">New Suggestion:</h2>
+      <p id="jumboTronText">You haven't interacted with Cindy in a while, check in with her when she's free!</p>
+      <a href="cindy.html" class="btn btn-success">User's Profile</a>
+    </div>
+  </div>
+</div>
+
+<!--Javascript for Switching Tabs -->
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
