@@ -12,6 +12,11 @@
   margin-right: auto;
 }
 
+#inputBar {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 #message {
   text-align: center;
   font-size: 300%;

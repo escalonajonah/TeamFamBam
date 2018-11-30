@@ -2,102 +2,133 @@
 <html>
 <head>
 
-<title>Messaging Main Screen</title>
+<title>FamBam Test Page</title>
+
+<link href ="homepage.css" rel="stylesheet" type="text/css">
+<link href="mainpage.css" rel="stylesheet" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
 
 <script>
 function goBack() {
     window.history.back();
 }
 </script>
-<link href="mainpage.css" rel="stylesheet"></link>
+
 </head>
 
 <body>
 
-<div class="buttons">
-	<a href="index.html">
-		<img class="homeButton" scr= "-webkit-user-select: none;" src="http://worldartsme.com/images/home-vector-clipart-1.jpg"
-		style ="width:55px;height:45px;">
-	</a>
-</div>
-<div>
-	 <a href="mainpage.html">
-	  <img class="plusSign" scr="-webkit-user-select: none;" src="https://png.icons8.com/metro/1600/plus.png"
-	  style ="width:55px;height:55px;">
-	 </a>
-</div>
-<div>
-	 <a href="find.html">
-	  <img class="magGlass" src="https://image.flaticon.com/icons/png/512/57/57477.png"
-	  style ="width:50px;height:50px;">
-	 </a>
-</div>
-<div>
-	 <a href="notifications.html">
-	  <img class="notification" src="https://image.flaticon.com/icons/png/512/64/64568.png"
-	  style ="width:50px;height:50px;">
-	 </a>
-</div>
-<div>
-	 <a href="settings.html">
-	  <img class="gear" src="http://simpleicon.com/wp-content/uploads/gear.png"
-	  style ="width:55px;height:55px;">
-  </a>
-</div>
-<div>
-	 <a href="help.html">
-	  <img class="questionMark" src="http://www.astronomy.org.il/joomlafimal/images/fontawesome/question23.png"
-	  style ="width:80px;height:55px;">
-	 </a>
-</div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        FamBam
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="find.html">
+              <i class="fas fa-search-plus"></i> Friend Search
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="notifications2.html">
+              <i class="fas fa-flag-checkered"></i> Notifications
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">
+              <i class="fas fa-cog"></i> Help
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <button type="button" class="btn btn-default btn-sm">
+                <i class="fas fa-sign-out-alt"></i>  Log Out
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--JumboTron-->
+  <div class="jumbotron">
+    <br>
+    <button type="button" class="btn btn-secondary btn-lg" id="backButton" onclick="goBack()">Back</button>
+    <h1 id="jumboTronText">Draft Interaction:</h1>
+    <p id="jumboTronText">Draft A Message.</p>
+      </h1>
+  </div>
+
+  <br>
+
+  <div id = "alert_placeholder"></div>
+
+  <br>
+  <!-- Send To Form -->
+    <div class="input-group mb-2 input-group-lg" id="sendInput">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Send To:</span>
+      </div>
+      <input type="text" class="form-control">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="button" id="submit">Send</button>
+        <button class="btn btn-danger" type="button">Cancel</button>
+      </div>
+    </div>
+
+  <br>
+  <br>
+
+  <!-- Text Area -->
+    <div class="container-fluid">
+      <div class="form-group">
+        <textarea class="form-control" rows="5" id="comment"></textarea>
+      </div>
+    </div>
+
+  <script type="text/javascript">
+  bootstrap_alert = function() {}
+  bootstrap_alert.warning = function(message) {
+            $('#alert_placeholder').html('<div class="alert alert-success"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+        }
 
 
+  $('#submit').on('click', function() {
+            bootstrap_alert.warning('Your message has been sent! Click here to see your <a href="stats.html">Interactions</a>.');
+  });
+  </script>
 
-<div class="box1" >
-	<h2> [WRITTEN MESSAGE HERE] </h2>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-		do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-	<div>
-			<img class="plusSign2" src="https://png.icons8.com/metro/1600/plus.png">
-		</div>
-			<div>
-				<img class="smileyFace" src="http://images.clipartpanda.com/straight-face-clipart-black-and-white-smiley-face-hi.png">
-			</div>
-	</div>
-	<div class="box2" >
-		<h2> [WRITTEN MESSAGE HERE] </h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-			do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</div>
-
-
-<div class="titleText">
-			<h1> Draft Interaction </h1>
-</div>
-
-<div class="sendTo">
-			<h2>SEND TO _______________________? <h2>
-</div>
-
-
-<div class="backButton">
-	<button type="button" onclick="goBack()" 	style ="width: 100px;height:55px;"> BACK </button>
-</div>
-<div class="sendButton">
-	<button type="button" onclick="alert('SENT!')" style ="width:100px;height:55px;"> SEND </button>
-</div>
-<div class="cancelButton">
-	<button type="button" onclick="alert('CANCELLED')" style ="width:100px;height:55px;"> CANCEL </button>
-</div>
-<div class="deleteButton">
-	<button type="button" onclick="alert('DELETE MESSAGE')" style ="width:100px; height:55px;"> DELETE </button>
-</div>
-<div class="previewButton">
-	<button type="button" onclick="alert('PREVIEW GOES HERE')" style ="width: 100px; height:55px;"> PREVIEW </button>
-</div>
-<div class="textBox">
-	<textarea rows="3" cols="43"> [Type Message Here] </textarea>
-</div>
-
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/handlebars-v4.0.11.js"></script>
+<script src="js/mainpage.js"></script>
 </body>
 </html>
