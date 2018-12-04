@@ -56,11 +56,9 @@
   background-color: rgba(255, 255, 255, 0.68);
 }
 
-.card{
-  background-color: rgba(255, 255, 255, 0.61);
-}
 .graph{
   margin-bottom: 50px;
+  background-color: #ffffff;
 }
 
 .secondButtons {
@@ -253,4 +251,8 @@
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
+}
+
+.card{
+  box-shadow: 4px 4px 5px black;
 }
