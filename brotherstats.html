@@ -18,6 +18,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
 <script src="js/graphs.js"></script>
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 <script>
 function goBack() {
     window.history.back();
@@ -26,59 +28,70 @@ function goBack() {
 
 </head>
 
-<body>
+<body style="background-color: #336699;">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-sm bg-dark navbar-light">
-    <!-- Brand/logo -->
-    <a class="navbar-brand" href="#">
-    </a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">
+        FamBam
+      </a>
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <button type="button" class="btn btn-secondary btn-lg" id="backButton" onclick="goBack()">Back</button>
-      </li>
-      <li class="nav-item">
-        <a href="index.html">
-          <button type="button" class="btn btn-danger btn-lg"> Log Out </button>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="home.html">
-         <img class="plusSign" scr="-webkit-user-select: none;" src="icons/home_white.png"
-         style ="width:55px;height:50px;">
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="find.html">
-         <img class="magGlass" src="icons/magnifyingGlass_white.png"
-         style ="width:55px;height:50px;">
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="notifications.html">
-         <img class="notification" src="icons/alert_white.png"
-         style ="width:55px;height:50px;">
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="settings.html">
-          <img class="gear" src="icons/gear_white.png"
-          style ="width:55px;height:50px;">
-       </a>
-      </li>
-      <li class="nav-item">
-        <a href="help.html">
-         <img class="questionMark" src="icons/questionmark_white.png"
-         style ="width:55px;height:50px;">
-        </a>
-      </li>
-    </ul>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="find.html">
+              <i class="fas fa-search-plus"></i> Friend Search
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="notifications2.html">
+              <i class="fas fa-flag-checkered"></i> Notifications
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="settings.html">
+              <i class="fas fa-cog"></i> Settings
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="help.html">
+              <i class="fas fa-question-circle"></i> Help
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <button type="button" class="btn btn-default btn-sm">
+                <i class="fas fa-sign-out-alt"></i>  Log Out
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
+  <br>
+
 <!--JumboTron-->
-  <div class="jumbotron">
+  <div class="jumbotron" style="background-color: rgba(255, 255, 255, 0.68);">
+    <br>
+    <button type="button" class="btn btn-secondary btn-lg" id="backButton" onclick="goBack()">
+      <i class="fas fa-arrow-left"></i> Back
+    </button>
     <h1 id="jumboTronText">Interaction Statistics</h1>
   </div>
 
