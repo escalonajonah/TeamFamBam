@@ -8,6 +8,11 @@
   margin-right: auto;
 }
 
+.cardImg {
+  width: 100%;
+  object-fit: cover;
+}
+
 #inputBar {
   margin-left: 10px;
   margin-right: 10px;
