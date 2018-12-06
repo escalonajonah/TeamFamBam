@@ -40,15 +40,15 @@
 <br>
 
     <div class="loginPage">
-    <div class="form">
+    <div class="form" name="register">
         <form class="registerForm">
-          <input type="text" placeholder="User Name" id="user"/>
-          <input type="password" placeholder="Password" id="pass"/>
-          <input type="text" placeholder="Email" id="emailAdd"/>
-          <input type="text" placeholder="First Name" id="fName"/>
-          <input type="text" placeholder="Last Name" id="lName"/>
+          <input type="text" placeholder="User Name" name ="user" id="user"/>
+          <input type="password" placeholder="Password" name="password" id="pass"/>
+          <input type="text" placeholder="Email" name="email" id="emailAdd"/>
+          <input type="text" placeholder="First Name" name="first" id="fName"/>
+          <input type="text" placeholder="Last Name" name="last" id="lName"/>
 
-          <input class="button" onclick="saveData()"
+          <input class="button" onclick="validateForm()"
           type="button" value="SIGN UP" />
           <p class="message">Already Registered? <a href="#">Login</a></p>
           </form>
@@ -59,7 +59,7 @@
           <input type="text" placeholder="User Name" id="inputU"/>
           <input type="password" placeholder="Password" id="inputP"/>
 
-          <input type="button" class="button" onclick="logIn()"
+          <input type="button" class="button" onclick="validateLogin()"
            value="LOG IN" />
           <p class="message">Not Registered? <a href="#">Register</a></p>
         </form>
@@ -68,6 +68,7 @@
         <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 
         <script>
+
           $('.message a').click(function(){
           $('form').animate({height:"toggle", opacity: "toggle"});
           });

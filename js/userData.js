@@ -5,6 +5,35 @@ var email = document.getElementById("emailAdd");
 var firstName = document.getElementById("fName");
 var lastName = document.getElementById("lName");
 
+var inputU = document.getElementById("inputU");
+var inputP = document.getElementById("inputP");
+
+function validateForm() {
+  if (userName.value == "") {
+    alert("Username must be filled out");
+    return false;
+  }
+  else if (passWord.value == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  else if (email.value == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  else if (firstName.value == "") {
+    alert("First Name must be filled out");
+    return false;
+  }
+  else if (lastName.value == "") {
+    alert("Last Name must be filled out");
+    return false;
+  }
+  else{
+    saveData();
+  }
+};
+
 function saveData(){
   localStorage.setItem('userName', user.value);
   localStorage.setItem('passWord', pass.value);
@@ -14,6 +43,7 @@ function saveData(){
   window.location.href="index.html";
   alert("Your User Details Have Been Saved!");
 };
+
 
 //Login Page Data
 var inputUser = document.getElementById('inputU');
@@ -28,6 +58,20 @@ function logIn(){
     window.location.href="home.html";
   } else {
     alert ("This Login Information is Invalid");
+  }
+}
+
+function validateLogin(){
+  if (inputUser.value == "") {
+    alert("Username must be filled out");
+    return false;
+  }
+  else if (inputPass.value == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+  else{
+    logIn();
   }
 }
 
