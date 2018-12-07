@@ -3,11 +3,18 @@ body{
   background-size:1500px 1500px;
   background-position:center;
 }
+.logo{
+  position: absolute;
+  left: 0;
+  top: 13%;
+  width: 100%;
+  text-align: center;
+}
 
 .appName{
   position: absolute;
   left: 0;
-  top: 20%;
+  top: 23%;
   width: 100%;
   text-align: center;
   font-size: 60px;
@@ -15,6 +22,7 @@ body{
   font-weight: 100;
   font-variant: normal;
   color: #FFFFFF;
+  text-shadow: 2px 2px 4px #000000;
 
 }
 
@@ -26,13 +34,14 @@ body{
 }
 
 .form{
-  position: relative;
+  position: absolute;
   z-index: 1;
   background: #2F4F4F;
   max-width: 400px;
   margin: 0 auto 100px;
   padding: 30px;
   text-align: center;
+  box-shadow: 2px 2px 4px #000000;
 }
 
 .form input{
